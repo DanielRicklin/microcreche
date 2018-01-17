@@ -1,0 +1,36 @@
+@layout('main')
+
+@section('content')
+    <h1>Hii there !</h1>
+    <p>Ajout de description comme avant ou pas..</p>
+    
+    <div class="row text-center">
+        <div class="col-md">
+            <label for="emplacement1">Sélectionnez un emplacement : </label><br>
+            <select class="custom-select col-md-5" name="emplacement1" id="emplacement1" class="form-control">
+                @each(emplacement in emplacements)
+                    <option>{{ emplacement.nom }}</option>
+                @endeach
+            </select>
+        </div>
+        <div class="col-md">
+            <label for="capteur1">Sélectionnez un capteur : </label><br>
+            <select class='custom-select col-md-5' name='capteur1' id='capteur1' class="form-control"></select>
+        </div>
+    </div>
+    <div class="row mt-4 text-center">
+        <div class="col-md">
+            <label>Date de début: </label><br>
+            <input type="text" placeholder="YYYY-MM-JJ HH:MM:SS" class="form-control col-md-5 custom-select" id="dateDebut">
+        </div>
+        <div class="col-md">
+            <label>Date de fin: </label><br>
+            <input type="text" placeholder="YYYY-MM-JJ HH:MM:SS" class="form-control col-md-5 custom-select" id="dateFin">
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn btn-default" onclick="filterDate()">Créer graphique</button>
+    </div>
+
+    <div id="chartdiv"></div>   
+@endsection

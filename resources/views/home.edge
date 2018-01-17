@@ -1,0 +1,40 @@
+@layout('main')
+
+@section('content')
+    <h1>Hii there !</h1>
+    <p>Ajout de description comme avant ou pas..</p>
+    
+    <div class="row text-center">
+        <div class="col-md">
+            <label>Sélectionnez un emplacement 1: </label><br>
+            <select class="custom-select col-md-4" name="emplacement1" id="emplacement1">
+                @each(emplacement in emplacements1)
+                    <option>{{ emplacement.nom }}</option>
+                @endeach
+            </select>
+        </div>
+        <div class="col-md">
+            <label>Sélectionnez un capteur 1: </label><br>
+            <select class='custom-select col-md-4' name='capteur1' id='capteur1'></select>
+        </div>
+    </div>
+    <div class="row mt-4 text-center">
+        <div class="col-md">
+            <label>Sélectionnez un emplacement 2: </label><br>
+            <select class="custom-select col-md-4" name="emplacement2" id="emplacement2">
+                @each(emplacement in emplacements2)
+                    <option>{{ emplacement.nom }}</option>
+                @endeach
+            </select>
+        </div>
+        <div class="col-md">
+            <label>Sélectionnez un capteur 2: </label><br>
+            <select class='custom-select col-md-4' name='capteur2' id='capteur2'></select>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-default" onclick="createStockChart()">Créer graphique</button>
+    </div>
+
+    <div id="chartdiv"></div>   
+@endsection

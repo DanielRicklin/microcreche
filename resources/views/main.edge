@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="pyramid.png">
+    {{ css('perso') }}
+    {{ css('https://www.amcharts.com/lib/3/plugins/export/export.css') }}
+    {{ css('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css') }}
+    <title>Microcrèche</title>
+</head>
+<body>
+    @include('inc/navbar')
+    <div class="container mb-4">
+       @!section('content')
+    </div>
+    @include('inc/footer')
+    {{ script('https://code.jquery.com/jquery-3.2.1.slim.min.js') }}
+    {{ script('amcharts/amcharts.js') }}
+    {{ script('amcharts/serial.js') }}
+    {{ script('amcharts/amstock.js') }}
+    {{ script('amcharts/themes/light.js') }}
+    {{ script('amcharts/plugins/export/export.min.js') }}
+    {{ script('main')}}
+    
+    {{ script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js') }}
+    {{ script('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js') }}
+    {{ script('https://unpkg.com/axios/dist/axios.min.js') }}
+    {{ script('chart') }}
+</body>
+</html>
