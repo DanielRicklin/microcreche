@@ -2,7 +2,7 @@
 
 ## Setup
 
-Install all dependencies
+Installez les dépendences
 
 ```bash
 npm install
@@ -12,9 +12,9 @@ npm install
 npm install -g nodemon
 ```
 
-Create .env file like .env.example, copy it and replace by what you need !
+Créez un fichier .env comme .env.example, inspirez vous-en et remplacez DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE
 
-Run the following command to run the application.
+Puis lancez l'application
 
 ```bash
 nodemon server.js
