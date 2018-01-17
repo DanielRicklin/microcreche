@@ -12,6 +12,8 @@ npm install
 npm install -g nodemon
 ```
 
+Create .env file like .env.example, copy it and replace by what you need !
+
 Run the following command to run the application.
 
 ```bash
