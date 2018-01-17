@@ -2,7 +2,7 @@
 
 ## Setup
 
-Install all depedencies
+Install all dependencies
 
 ```bash
 npm install
